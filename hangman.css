@@ -25,3 +25,7 @@ a{
 .showLetter{
     color: black;
 }
+
+.hiddeButton{
+    background-color: gray;
+}

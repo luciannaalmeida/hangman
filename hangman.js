@@ -13,7 +13,7 @@ function createAlphabetickeyboard(){
         let letter = i.toString(36)
         let alphaButton = document.createElement("a")
         alphaButton.innerHTML = letter
-        //alphaButton.setAttribute("id","button"+i-9)
+        alphaButton.setAttribute("id","button"+(i-9))
         alphaButton.addEventListener('click',checkLetter,false)  
         keyboardContainer.appendChild(alphaButton)
 
@@ -22,13 +22,13 @@ function createAlphabetickeyboard(){
 }
 
 function checkLetter(event){
-    let buttonLetter = event.target.text
+    let button = event.target
     
     for(i=0;i<wordSplitedIntoChars.length;i++){
-        if(buttonLetter===wordSplitedIntoChars[i]){
-            let button  = document.getElementById('letter'+i)
-            button.setAttribute("class","showLetter")
-            
+        if(button.text===wordSplitedIntoChars[i]){
+            let letter  = document.getElementById('letter'+i)
+            letter.setAttribute("class","showLetter")
+            button.setAttribute("class","hiddeButton")
         }
     }
 }
