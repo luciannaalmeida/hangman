@@ -1,10 +1,12 @@
 
 window.onload= function(){
-newWord()
+    newWord()
 }
+var selectedWord
+
 function newWord(){
 
-    let selectedWord = getRandomWord()
+    selectedWord = getRandomWord()
     
     //alert('Uma novo nome pra vc ==> '+ selectedWord)
 
