@@ -1,11 +1,16 @@
 
 window.onload= function(){
-    createAlphabetickeyboard()
-    newWord()
+   restartGame();
 }
 var selectedWord
 var wordSplitedIntoChars
 var alphaKeyboard=[]
+
+function restartGame(){
+    cleanAll()
+    createAlphabetickeyboard()
+    newWord()
+}
 function createAlphabetickeyboard(){
     
     let keyboardContainer = document.getElementById('keyboard')    
@@ -35,6 +40,7 @@ function checkLetter(event){
 
 function newWord(){
 
+    
     selectedWord = getRandomWord()
     
     //alert('Uma novo nome pra vc ==> '+ selectedWord)
@@ -44,6 +50,15 @@ function newWord(){
     addToDOM(wordSplitedIntoChars)
     
 
+}
+
+function cleanAll(){
+
+    selectedWord = undefined
+    wordSplitedIntoChars = undefined
+    alphaKeyboard=[]
+    document.getElementById('wordContainer').innerHTML = ""; 
+    document.getElementById('keyboard').innerHTML = ""; 
 }
 
 function getRandomWord(){
