@@ -1,8 +1,37 @@
 
 window.onload= function(){
+    createAlphabetickeyboard()
     newWord()
 }
 var selectedWord
+var wordSplitedIntoChars
+var alphaKeyboard=[]
+function createAlphabetickeyboard(){
+    
+    let keyboardContainer = document.getElementById('keyboard')    
+    for(i=9;++i<36;){
+        let letter = i.toString(36)
+        let alphaButton = document.createElement("a")
+        alphaButton.innerHTML = letter
+        //alphaButton.setAttribute("id","button"+i-9)
+        alphaButton.addEventListener('click',checkLetter,false)  
+        keyboardContainer.appendChild(alphaButton)
+
+    }
+
+}
+
+function checkLetter(event){
+    let buttonLetter = event.target.text
+    
+    for(i=0;i<wordSplitedIntoChars.length;i++){
+        if(buttonLetter===wordSplitedIntoChars[i]){
+            let button  = document.getElementById('letter'+i)
+            button.setAttribute("class","showLetter")
+            
+        }
+    }
+}
 
 function newWord(){
 
@@ -10,7 +39,7 @@ function newWord(){
     
     //alert('Uma novo nome pra vc ==> '+ selectedWord)
 
-    let wordSplitedIntoChars = selectedWord.split('')
+    wordSplitedIntoChars = selectedWord.split('')
 
     addToDOM(wordSplitedIntoChars)
     
@@ -33,6 +62,6 @@ function addToDOM(wordSplitedIntoChars){
     }
 }
 var words =[
-    'THIAGO', 'LUCIANNA', 'LEONNARDO', 'BEBE', 'COCÔ'
+    'thiago', 'lucianna', 'leonnardo', 'bebe', 'coco'
 
 ]
