@@ -1,23 +1,14 @@
 
 function fillLetter(element){
-    alert(element.value);
-    
-    let button = element;
     let selectedLetter = element.value;
+    let wordLettersElements = document.getElementsByClassName("letter_label")
 
-    let wordLetters = document.getElementsByClassName('letter_label')
-
-    wordLetters.array.forEach(wordLetter => {
-        if (wordLetter.value == selectedLetter) {
-            wordLetter.innerText = selectedLetter;
-            button.disabled = true;
+    Array.prototype.forEach.call(wordLettersElements, function(wordLetterElement) {
+        console.log(wordLetterElement.name);
+        if (wordLetterElement.name == selectedLetter) {
+            wordLetterElement.value = selectedLetter;
         }
     });
 
-    
-    
-
-
-
-
+    element.disabled = true;
 }
