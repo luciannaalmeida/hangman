@@ -33,9 +33,11 @@ function checkLetter(event){
         if(button.text===wordSplitedIntoChars[i]){
             let letter  = document.getElementById('letter'+i)
             letter.setAttribute("class","showLetter")
-            button.setAttribute("class","hiddeButton")
+            
         }
     }
+    button.setAttribute("class","hiddeButton")
+    button.disabled = true;
 }
 
 function newWord(){
