@@ -78,7 +78,3 @@ function addToDOM(wordSplitedIntoChars){
         wordContainer.appendChild(letterDiv)
     }
 }
-var words =[
-    'thiago', 'lucianna', 'leonnardo', 'bebe', 'coco'
-
-]
