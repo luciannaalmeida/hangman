@@ -1,7 +1,7 @@
 
 function fillLetter(element){
     let selectedLetter = element.value;
-    let wordLettersElements = document.getElementsByClassName("letter_label")
+    let wordLettersElements = document.getElementsByClassName("secret_letter")
 
     Array.prototype.forEach.call(wordLettersElements, function(wordLetterElement) {
         console.log(wordLetterElement.name);

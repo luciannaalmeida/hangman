@@ -1,19 +1,44 @@
-h1 {
-    background-color: beige;
-}   
-ul {
-    display: flex;
-    position: relative;
-    flex-direction: row;
-    list-style-type: none;   
-} 
-
-li {
-    border: 2px solid black;
-    margin-left: 5px; 
-    padding: 0px 5px; 
+main {
+    width: 70%;
+    margin-left: auto;
+    margin-right: auto;
+    text-align: center;
 }
-
-.letter_label{
-    
+h1 {
+    padding-top: 0.2em;
+    padding-bottom: 0.2em;
+    background-color: purple;
+    color: white;
+}
+.secret_word_container {
+    margin-top: 5em;
+    margin-bottom: 3em;
+}
+.secret_word {
+    list-style-type: none;
+    display: flex;
+    align-content: center;
+    /* position: relative; */
+    /* flex-direction: row; */
+}
+.secret_letter_container {
+    border-bottom: 2px solid black;
+    margin-left: 5px;
+    padding: 0px 5px;
+    width: 1.5em;
+}
+.letter_selection_label {
+    font-weight: bold;
+    margin-bottom: 2em;
+}
+.letter_selection_container {
+    margin-top: 2em;
+    margin-bottom: 2em;
+}
+.letter {
+    font-weight: bold;
+}
+.actions_container {
+    margin-top: 2em;
+    margin-bottom: 2em;
 }
