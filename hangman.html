@@ -1,24 +1,44 @@
 <html>
-    <head>
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
 
-        <link rel="stylesheet" type="text/css" href="hangman.css">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/materialize/1.0.0/css/materialize.min.css">
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" type="text/css" href="hangman.css">
 
-        <title>Forca</title>
-    </head>
-    <body>
-        <h1>Jogo da Forca</h1>
+    <title>Forca</title>
+</head>
 
-        <ul id="wordContainer">
-
-        </ul>
-
-        <button type="button" onclick="restartGame()">Nova Palavra</button>
+<body>
         
+    <h1>Jogo da Forca</h1>
+    <div class="main-content">
+            <div class="button-container">
+                     <button class="word-button" type="button" onclick="restartGame()">
+                            <i class=" material-icons" >autorenew</i>
+                    </button>
+                </div>
+        <div class="hanger-container">
+            <div class="hanger">
+                <div class="stick-head"></div>
+                <div class="stick-body"></div>
+                <div class="stick-left-arm"></div>
+                <div class="stick-right-arm"></div>
+                <div class="stick-left-leg"></div>
+                <div class="stick-right-leg"></div>
+            </div>
+            <ul id="wordContainer" class="word-container"></ul>
+        </div>
+        
+    </div>
+
+    <div class="keyboard-container">
+
 
 
         <ul id="keyboard"></ul>
-        <script src="word.js"></script>
-        <script src="hangman.js"></script>
-    </body>
+    </div>
+    <script src="word.js"></script>
+    <script src="hangman.js"></script>
+</body>
+
 </html>
