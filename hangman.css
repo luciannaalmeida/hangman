@@ -1,5 +1,6 @@
 main {
-    width: 70%;
+    width: 70vw;
+    height: 100vh;
     margin-left: auto;
     margin-right: auto;
     text-align: center;
@@ -11,7 +12,7 @@ h1 {
     color: white;
 }
 .secret_word_container {
-    margin-top: 5em;
+    margin-top: 3em;
     margin-bottom: 3em;
     display: flex;
     justify-content: center; 
@@ -20,8 +21,8 @@ h1 {
     border-bottom: 2px solid black;
     margin-left: 5px;
     margin-right: 5px;
-    /* padding: 0px 5px; */
-    width: 3.5em;
+    width: 1.5em;
+    height: 1.3em;
 }
 .letter_selection_label {
     font-weight: bold;
