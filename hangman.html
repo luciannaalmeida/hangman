@@ -6,60 +6,44 @@
     <body>
         <main>
             <h1>Jogo da Forca</h1>
-            <div class="secret_word_container">
-            
-                <!--
-                        <output class="secret_letter" name="C"></output>
-                
-                    
-                        <output class="secret_letter" name="A"></output>
-                    
-                    
-                        <output class="secret_letter" name="S"></output>
-                    
-                    
-                        <output class="secret_letter" name="A"></output>
-                    
-                -->
-            </div>
+            <div class="secret_word_container"></div>
 
             <div class="letter_selection_container">
                 <p class="letter_selection_label">Escolha uma letra:</p>
 
-                <button type="button" name="letter" value="A" onclick="fillLetter(this)">A</button>
-                <button type="button" name="letter" value="B" onclick="fillLetter(this)">B</button>
-                <button type="button" name="letter" value="C" onclick="fillLetter(this)">C</button>
-                <button type="button" name="letter" value="D" onclick="fillLetter(this)">D</button>
-                <button type="button" name="letter" value="E" onclick="fillLetter(this)">E</button>
-                <button type="button" name="letter" value="F" onclick="fillLetter(this)">F</button>
-                <button type="button" name="letter" value="G" onclick="fillLetter(this)">G</button>
-                <button type="button" name="letter" value="H" onclick="fillLetter(this)">H</button>
-                <button type="button" name="letter" value="I" onclick="fillLetter(this)">I</button>
-                <button type="button" name="letter" value="J" onclick="fillLetter(this)">J</button>
-                <button type="button" name="letter" value="K" onclick="fillLetter(this)">K</button>
-                <button type="button" name="letter" value="L" onclick="fillLetter(this)">L</button>
-                <button type="button" name="letter" value="M" onclick="fillLetter(this)">M</button>
-                <button type="button" name="letter" value="N" onclick="fillLetter(this)">N</button>
-                <button type="button" name="letter" value="O" onclick="fillLetter(this)">O</button>
-                <button type="button" name="letter" value="P" onclick="fillLetter(this)">P</button>
-                <button type="button" name="letter" value="Q" onclick="fillLetter(this)">Q</button>
-                <button type="button" name="letter" value="R" onclick="fillLetter(this)">R</button>
-                <button type="button" name="letter" value="S" onclick="fillLetter(this)">S</button>
-                <button type="button" name="letter" value="T" onclick="fillLetter(this)">T</button>
-                <button type="button" name="letter" value="U" onclick="fillLetter(this)">U</button>
-                <button type="button" name="letter" value="V" onclick="fillLetter(this)">V</button>
-                <button type="button" name="letter" value="W" onclick="fillLetter(this)">W</button>
-                <button type="button" name="letter" value="X" onclick="fillLetter(this)">X</button>
-                <button type="button" name="letter" value="Y" onclick="fillLetter(this)">Y</button>
-                <button type="button" name="letter" value="Z" onclick="fillLetter(this)">Z</button>
+                <button type="button"class="letter" name="letter" value="A" onclick="fillLetter(this)">A</button>
+                <button type="button"class="letter" name="letter" value="B" onclick="fillLetter(this)">B</button>
+                <button type="button"class="letter" name="letter" value="C" onclick="fillLetter(this)">C</button>
+                <button type="button"class="letter" name="letter" value="D" onclick="fillLetter(this)">D</button>
+                <button type="button"class="letter" name="letter" value="E" onclick="fillLetter(this)">E</button>
+                <button type="button"class="letter" name="letter" value="F" onclick="fillLetter(this)">F</button>
+                <button type="button"class="letter" name="letter" value="G" onclick="fillLetter(this)">G</button>
+                <button type="button"class="letter" name="letter" value="H" onclick="fillLetter(this)">H</button>
+                <button type="button"class="letter" name="letter" value="I" onclick="fillLetter(this)">I</button>
+                <button type="button"class="letter" name="letter" value="J" onclick="fillLetter(this)">J</button>
+                <button type="button"class="letter" name="letter" value="K" onclick="fillLetter(this)">K</button>
+                <button type="button"class="letter" name="letter" value="L" onclick="fillLetter(this)">L</button>
+                <button type="button"class="letter" name="letter" value="M" onclick="fillLetter(this)">M</button>
+                <button type="button"class="letter" name="letter" value="N" onclick="fillLetter(this)">N</button>
+                <button type="button"class="letter" name="letter" value="O" onclick="fillLetter(this)">O</button>
+                <button type="button"class="letter" name="letter" value="P" onclick="fillLetter(this)">P</button>
+                <button type="button"class="letter" name="letter" value="Q" onclick="fillLetter(this)">Q</button>
+                <button type="button"class="letter" name="letter" value="R" onclick="fillLetter(this)">R</button>
+                <button type="button"class="letter" name="letter" value="S" onclick="fillLetter(this)">S</button>
+                <button type="button"class="letter" name="letter" value="T" onclick="fillLetter(this)">T</button>
+                <button type="button"class="letter" name="letter" value="U" onclick="fillLetter(this)">U</button>
+                <button type="button"class="letter" name="letter" value="V" onclick="fillLetter(this)">V</button>
+                <button type="button"class="letter" name="letter" value="W" onclick="fillLetter(this)">W</button>
+                <button type="button"class="letter" name="letter" value="X" onclick="fillLetter(this)">X</button>
+                <button type="button"class="letter" name="letter" value="Y" onclick="fillLetter(this)">Y</button>
+                <button type="button"class="letter" name="letter" value="Z" onclick="fillLetter(this)">Z</button>
             </div>
 
             <div class="actions_container">
                 <button type="button" onclick="newWord()">Nova Palavra</button>
             </div>
-
         </main>
-        
+
         <script src="hangman.js"></script>
         <script src="words/nouns.js"></script>
     </body>

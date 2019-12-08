@@ -1,20 +1,24 @@
 function newWord(){
     let wordContainer = document.querySelector('.secret_word_container')
-    
-    let word = nouns[0];
+
+    // clear
+    wordContainer.innerHTML = '';
+    let letterSelectors = document.querySelectorAll('.letter')
+    letterSelectors.forEach(letterSelector => {
+        letterSelector.disabled = false;
+    })
+
+    let index = Math.ceil(Math.random() * nouns.length) -1;
+    let word = nouns[index];
     let letters = word.split('');
-    
+
     letters.forEach(letter => {
         let output = document.createElement('output');
-    output.setAttribute('class','secret_letter');
+        output.setAttribute('class','secret_letter');
 
-    output.setAttribute('name',letter)
-    wordContainer.appendChild(output);
-
+        output.setAttribute('name',letter)
+        wordContainer.appendChild(output);
     })
-    
-
-    
 }
 
 function fillLetter(element){
