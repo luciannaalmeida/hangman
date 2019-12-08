@@ -1,15 +1,10 @@
 function newWord(){
     let wordContainer = document.querySelector('.secret_word_container')
 
-    // clear
     wordContainer.innerHTML = '';
-    let letterSelectors = document.querySelectorAll('.letter')
-    letterSelectors.forEach(letterSelector => {
-        letterSelector.disabled = false;
-    })
+    resetLettersSelector();
 
-    let index = Math.ceil(Math.random() * nouns.length) -1;
-    let word = nouns[index];
+    let word = chooseWordRandomly();
     let letters = word.split('');
 
     letters.forEach(letter => {
@@ -19,6 +14,21 @@ function newWord(){
         output.setAttribute('name',letter)
         wordContainer.appendChild(output);
     })
+}
+
+function resetLettersSelector() {
+    let lettersSelector = document.querySelectorAll('.letter');
+
+    lettersSelector.forEach(letterSelector => {
+        letterSelector.disabled = false;
+    });
+}
+
+function chooseWordRandomly() {
+    let randomIndex = Math.ceil(Math.random() * nouns.length) -1;
+    let word = nouns[randomIndex];
+
+    return(word);
 }
 
 function fillLetter(element){
