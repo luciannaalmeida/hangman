@@ -1,3 +1,5 @@
+window.onload = function() { newWord() };
+
 function newWord(){
     let wordContainer = document.querySelector('.secret_word_container')
 
