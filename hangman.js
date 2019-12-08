@@ -1,3 +1,21 @@
+function newWord(){
+    let wordContainer = document.querySelector('.secret_word_container')
+    
+    let word = nouns[0];
+    let letters = word.split('');
+    
+    letters.forEach(letter => {
+        let output = document.createElement('output');
+    output.setAttribute('class','secret_letter');
+
+    output.setAttribute('name',letter)
+    wordContainer.appendChild(output);
+
+    })
+    
+
+    
+}
 
 function fillLetter(element){
     let selectedLetter = element.value;
