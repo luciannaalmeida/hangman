@@ -38,7 +38,6 @@ function fillLetter(element){
     let wordLettersElements = document.getElementsByClassName("secret_letter")
 
     Array.prototype.forEach.call(wordLettersElements, function(wordLetterElement) {
-        console.log(wordLetterElement.name);
         if (wordLetterElement.name == selectedLetter) {
             wordLetterElement.value = selectedLetter;
         }
