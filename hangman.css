@@ -27,9 +27,12 @@ h1 {
 .head {
     border: 0.2em solid black;
     border-radius: 2em;
-    width: 2em;
-    height: 2em;
+    width: 2.2em;
+    height: 2.2em;
     background-color: black;
+    color: white;
+    font: -webkit-control;
+
 }
 .body {
     display: flex;
