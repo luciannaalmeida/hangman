@@ -1,9 +1,11 @@
 window.onload = function() { newWord() };
+var wrongGuessesCount = 0;
 
 function newWord(){
     let wordContainer = document.querySelector('.secret_word_container')
 
     wordContainer.innerHTML = '';
+    resetHangman();
     resetLettersSelector();
 
     let word = chooseWordRandomly();
@@ -16,6 +18,16 @@ function newWord(){
         output.setAttribute('name',letter)
         wordContainer.appendChild(output);
     })
+}
+
+function resetHangman() {
+    let hangmanParts = document.querySelectorAll(".hangman_part.active")
+
+    hangmanParts.forEach(function(hangmanPart) { resetHangmanPart(hangmanPart)});
+}
+
+function resetHangmanPart(hangmanPartElement) {
+    hangmanPartElement.classList.remove("active");
 }
 
 function resetLettersSelector() {
