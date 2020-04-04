@@ -23,53 +23,57 @@ h1 {
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    background-color: yellow;
 }
 .head {
-    border: 0.2em solid black;
+    border: 0.2em solid lightgrey;
     border-radius: 2em;
     width: 2.2em;
     height: 2.2em;
     background-color: white;
-    color: black;
+    color: lightgrey;
     font: -webkit-control;
-
 }
 .body {
     display: flex;
 }
 .upper_body {
-    border: 0.15em solid black;
+    border: 0.15em solid lightgrey;
     height: 4em;
 }
 .right_arm {
-    border: 0.15em solid black;
+    border: 0.15em solid lightgrey;
     height: 2em;
     margin-right: 0.6em;
     transform: rotate(45deg);
+    background-color: white;
 }
 .left_arm {
-    border: 0.15em solid black;
+    border: 0.15em solid lightgrey;
     height: 2em;
     margin-left: 0.6em;
     transform: rotate(-45deg);
+    background-color: white;
 }
 .legs {
     display: flex;
     justify-content: center;
 }
 .right_leg {
-    border: 0.15em solid black;
+    border: 0.15em solid lightgrey;
     height: 3em;
     margin-right: 0.9em;
     margin-top: -0.6em;
     transform: rotate(45deg);
+    background-color: white;
 }
 .left_leg {
-    border: 0.15em solid black;
+    border: 0.15em solid lightgrey;
     height: 3em;
     margin-left: 0.9em;
     margin-top: -0.6em;
     transform: rotate(-45deg);
+    background-color: white;
 }
 .secret_word_container {
     display: flex;
