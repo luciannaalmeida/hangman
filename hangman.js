@@ -41,8 +41,10 @@ function resetHangmanPart(hangmanPartElement) {
 }
 
 function resetLettersSelector() {
-    let lettersSelector = document.querySelectorAll('.letter');
+    let letterSelectionLabelElement = document.querySelector(".letter_selection_label")
+    letterSelectionLabelElement.classList.remove("disabled");
 
+    let lettersSelector = document.querySelectorAll('.letter');
     lettersSelector.forEach(letterSelector => {
         letterSelector.disabled = false;
     });
@@ -76,7 +78,6 @@ function fillLetter(element){
 
 function computeWrongGuess() {
     wrongGuessesCount += 1;
-    console.log("wrong guesses: %d", wrongGuessesCount);
 
     activateHangmanPart(wrongGuessesCount);
 
@@ -93,12 +94,14 @@ function activateHangmanPart(index) {
 }
 
 function gameOver() {
-    disableLettersButtons();
+    disableLetterSelectors();
 }
 
-function disableLettersButtons() {
-    letterSelectorElements = document.querySelectorAll(".letter_selection_container .letter");
+function disableLetterSelectors() {
+    let letterSelectionLabelElement = document.querySelector(".letter_selection_label")
+    letterSelectionLabelElement.classList.add("disabled");
 
+    let letterSelectorElements = document.querySelectorAll(".letter_selection_container .letter");
     letterSelectorElements.forEach(function(element) { disableLetterSelector(element) });
 }
 
