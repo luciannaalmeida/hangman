@@ -80,6 +80,9 @@ h1 {
 .hangman_part.active {
     border-color: black;
 }
+.hangman_part.eyes.active {
+    color: red;
+}
 .secret_word_container {
     display: flex;
     justify-content: center;

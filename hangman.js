@@ -5,8 +5,7 @@ function newWord(){
     let wordContainer = document.querySelector('.secret_word_container')
 
     wordContainer.innerHTML = '';
-    resetHangman();
-    resetLettersSelector();
+    resetGame();
 
     let word = chooseWordRandomly();
     let letters = word.split('');
@@ -18,6 +17,16 @@ function newWord(){
         output.setAttribute('name',letter)
         wordContainer.appendChild(output);
     })
+}
+
+function resetGame() {
+    resetWrongGuessesCount();
+    resetHangman();
+    resetLettersSelector();
+}
+
+function resetWrongGuessesCount() {
+    wrongGuessesCount = 0;
 }
 
 function resetHangman() {
@@ -48,12 +57,32 @@ function chooseWordRandomly() {
 function fillLetter(element){
     let selectedLetter = element.value;
     let wordLettersElements = document.getElementsByClassName("secret_letter")
+    let successfulGuess = false;
 
     Array.prototype.forEach.call(wordLettersElements, function(wordLetterElement) {
         if (wordLetterElement.name == selectedLetter) {
             wordLetterElement.value = selectedLetter;
+            successfulGuess = true;
         }
     });
 
+    if (successfulGuess != true) {
+        computeWrongGuess();
+    }
+
     element.disabled = true;
+}
+
+function computeWrongGuess() {
+    wrongGuessesCount += 1;
+    console.log("wrong guesses: %d", wrongGuessesCount);
+
+    activateHangmanPart(wrongGuessesCount);
+}
+
+function activateHangmanPart(index) {
+    hangmanPartSelector = ".hangman_part#hangman_part_" + index;
+    hangmanPartElement = document.querySelector(hangmanPartSelector);
+
+    hangmanPartElement.classList.add("active");
 }
