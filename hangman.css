@@ -118,6 +118,6 @@ h1 {
     font-weight: bold;
     font-size: smaller;
     color: white;
-    padding: 1em;
-    border-end-end-radius: 0.75em;
+    padding: 0.8em;
+    border-radius: 2em;
 }
