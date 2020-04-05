@@ -113,3 +113,10 @@ h1 {
     margin-top: 2em;
     margin-bottom: 2em;
 }
+.new_word {
+    background-color: purple;
+    font-weight: bold;
+    font-size: smaller;
+    color: white;
+    padding: 1em;
+}
