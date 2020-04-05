@@ -1,5 +1,6 @@
 window.onload = function() { newWord() };
 var wrongGuessesCount = 0;
+var maxWrongGuesses = 7;
 
 function newWord(){
     let wordContainer = document.querySelector('.secret_word_container')
@@ -70,7 +71,7 @@ function fillLetter(element){
         computeWrongGuess();
     }
 
-    element.disabled = true;
+    disableLetterSelector(element);
 }
 
 function computeWrongGuess() {
@@ -78,6 +79,10 @@ function computeWrongGuess() {
     console.log("wrong guesses: %d", wrongGuessesCount);
 
     activateHangmanPart(wrongGuessesCount);
+
+    if (wrongGuessesCount >= maxWrongGuesses) {
+        gameOver();
+    }
 }
 
 function activateHangmanPart(index) {
@@ -85,4 +90,18 @@ function activateHangmanPart(index) {
     hangmanPartElement = document.querySelector(hangmanPartSelector);
 
     hangmanPartElement.classList.add("active");
+}
+
+function gameOver() {
+    disableLettersButtons();
+}
+
+function disableLettersButtons() {
+    letterSelectorElements = document.querySelectorAll(".letter_selection_container .letter");
+
+    letterSelectorElements.forEach(function(element) { disableLetterSelector(element) });
+}
+
+function disableLetterSelector(letterSelectorElement) {
+    letterSelectorElement.disabled = true
 }
