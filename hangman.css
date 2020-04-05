@@ -42,6 +42,7 @@ h1 {
 .upper_body {
     border: 0.15em solid lightgrey;
     height: 4em;
+    background-color: white;
 }
 .right_arm {
     border: 0.15em solid lightgrey;
