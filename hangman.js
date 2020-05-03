@@ -14,6 +14,7 @@ function newWord(){
     letters.forEach(letter => {
         let output = document.createElement('output');
         output.setAttribute('class','secret_letter');
+        output.classList.add('unrevealed_letter');
 
         output.setAttribute('name',letter)
         wordContainer.appendChild(output);
@@ -24,6 +25,7 @@ function resetGame() {
     resetWrongGuessesCount();
     resetHangman();
     resetLettersSelector();
+    closeVictoryModal();
 }
 
 function resetWrongGuessesCount() {
@@ -50,6 +52,11 @@ function resetLettersSelector() {
     });
 }
 
+function closeVictoryModal() {
+    modal = document.querySelector('#simpleModal');
+    modal.style.display = 'none';
+}
+
 function chooseWordRandomly() {
     let randomIndex = Math.ceil(Math.random() * nouns.length) -1;
     let word = nouns[randomIndex];
@@ -65,12 +72,15 @@ function fillLetter(element){
     Array.prototype.forEach.call(wordLettersElements, function(wordLetterElement) {
         if (wordLetterElement.name == selectedLetter) {
             wordLetterElement.value = selectedLetter;
+            wordLetterElement.classList.remove('unrevealed_letter');
             successfulGuess = true;
         }
     });
 
-    if (successfulGuess != true) {
+    if (successfulGuess == false) {
         computeWrongGuess();
+    } else if (isSecretWordRevealed() == true) {
+        endGameWithPlayerVictory();
     }
 
     disableLetterSelector(element);
@@ -107,4 +117,20 @@ function disableLetterSelectors() {
 
 function disableLetterSelector(letterSelectorElement) {
     letterSelectorElement.disabled = true
+}
+
+function isSecretWordRevealed() {
+    if (document.querySelector(".secret_letter.unrevealed_letter")) {
+        return false;
+    }
+    return true;
+}
+
+function endGameWithPlayerVictory() {
+    openVictoryModal();
+}
+
+function openVictoryModal() {
+    modal = document.querySelector('#simpleModal');
+    modal.style.display = 'block';
 }

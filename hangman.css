@@ -5,17 +5,52 @@ main {
     margin-right: auto;
     text-align: center;
 }
+
 h1 {
     padding-top: 0.2em;
     padding-bottom: 0.2em;
     background-color: purple;
     color: white;
 }
+
+.modal {
+    display: none;
+    position: fixed;
+    z-index: 1;
+    left: 0;
+    top: 0;
+    height: 100%;
+    width: 100%;
+    overflow: auto;
+    background-color: rgba(0, 0, 0, 0.6);
+}
+
+.modal-content {
+    background-color: #dee114;
+    margin: 20% auto;
+    padding: 20px;
+    width: 70%;
+    box-shadow: 0 5px 8px 0 rgba(0, 0, 0, 0.2), 0 7px 20px 0 rgba(0, 0, 0, 0.17);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+}
+
+.modal-content img {
+    width: 100%;
+}
+
+.modal-content .new_word {
+    width: 50%;
+    margin-top: 20px;
+}
+
 .hangman_container {
     display: flex;
     height: 70%;
     justify-content: space-around;
 }
+
 .hangman {
     border: 0.2em solid black;
     width: 30%;
@@ -25,6 +60,7 @@ h1 {
     align-items: center;
     background-color: yellow;
 }
+
 .head {
     border: 0.2em solid lightgrey;
     border-radius: 2em;
@@ -32,18 +68,22 @@ h1 {
     height: 2.2em;
     background-color: white;
 }
+
 .eyes {
     color: lightgrey;
     font: -webkit-control;
 }
+
 .body {
     display: flex;
 }
+
 .upper_body {
     border: 0.15em solid lightgrey;
     height: 4em;
     background-color: white;
 }
+
 .right_arm {
     border: 0.15em solid lightgrey;
     height: 2em;
@@ -51,6 +91,7 @@ h1 {
     transform: rotate(45deg);
     background-color: white;
 }
+
 .left_arm {
     border: 0.15em solid lightgrey;
     height: 2em;
@@ -58,10 +99,12 @@ h1 {
     transform: rotate(-45deg);
     background-color: white;
 }
+
 .legs {
     display: flex;
     justify-content: center;
 }
+
 .right_leg {
     border: 0.15em solid lightgrey;
     height: 3em;
@@ -70,6 +113,7 @@ h1 {
     transform: rotate(45deg);
     background-color: white;
 }
+
 .left_leg {
     border: 0.15em solid lightgrey;
     height: 3em;
@@ -78,17 +122,21 @@ h1 {
     transform: rotate(-45deg);
     background-color: white;
 }
+
 .hangman_part.active {
     border-color: black;
 }
+
 .hangman_part.eyes.active {
     color: red;
 }
+
 .secret_word_container {
     display: flex;
     justify-content: center;
     align-items: flex-end;
 }
+
 .secret_letter {
     border-bottom: 2px solid black;
     margin-left: 5px;
@@ -96,24 +144,34 @@ h1 {
     width: 1.5em;
     height: 1.3em;
 }
+
 .letter_selection_label {
     font-weight: bold;
     margin-bottom: 2em;
 }
+
 .letter_selection_label.disabled {
     color: lightgray;
 }
+
 .letter_selection_container {
     margin-top: 2em;
     margin-bottom: 2em;
 }
+
 .letter {
     font-weight: bold;
 }
+
+.letter:hover, .letter:focus {
+    cursor: pointer;
+}
+
 .actions_container {
     margin-top: 2em;
     margin-bottom: 2em;
 }
+
 .new_word {
     background-color: purple;
     font-weight: bold;
@@ -121,4 +179,8 @@ h1 {
     color: white;
     padding: 0.8em;
     border-radius: 2em;
+}
+
+.new_word:hover, .new_word:focus {
+    cursor: pointer;
 }
